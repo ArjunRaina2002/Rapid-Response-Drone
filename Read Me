@@ -1,0 +1,27 @@
+# Rapid Response Drone 🦺🚁
+
+**Tilt‑Rotor VTOL UAS for Marine Rescue & Wildfire Monitoring**
+
+## Overview
+
+This repository contains all code, documentation, and assets for the Rapid Response Drone project:
+- **VTOL mechanics**: Servo‑actuated tilt‑rotor transitions
+- **Autonomous planning**: Terrain‑aware A* mission planner
+- **Edge AI sensing**: Real‑time fire hotspot detection on Jetson Nano
+- **Payloads**: CO₂ flotation deployment and multispectral fire monitoring
+
+## 🛠️ Features
+
+- Vertical takeoff/landing with 4–6s tilt transition (±3 m hold)
+- 65 min endurance, 35 km range with 1.5 kg payload
+- Dual‑link communications (2.4 GHz, 900 MHz, 4G backup)
+- AES‑256 encryption and FHSS security
+
+## 📂 Directory Layout
+See the repository tree above for detailed folder structure and module responsibilities.
+
+## 🚀 Quick Start
+1. **Clone**:
+   ```bash
+   git clone https://github.com/yourorg/rapid-response-drone.git
+   cd rapid-response-drone
