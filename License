@@ -1,0 +1,32 @@
+
+---
+
+## 🔧 CI Configuration (`.github/workflows/ci.yml`)
+```yaml
+name: CI Pipeline
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  build-firmware:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build PX4 firmware
+        run: |
+          cd firmware && make px4_sitl_default
+
+  test-planner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r planner/requirements.txt
+      - name: Run planner tests
+        run: pytest planner/tests
