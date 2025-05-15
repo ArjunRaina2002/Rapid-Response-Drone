@@ -1,0 +1,32 @@
+rapid-response-drone/
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml                    # CI pipeline: code linting, tests, builds
+├── docs/
+│   ├── design/                       # UML diagrams, architecture diagrams
+│   ├── reports/                      # PDF reports and publications
+│   └── tutorials/                    # How‑tos (flight setup, payload integration)
+│
+├── firmware/                         # PX4 customization and C++ controllers
+│   ├── src/                          # custom modules (tilt-transition, mixer)
+│   └── CMakeLists.txt                # build configuration
+│
+├── planner/                          # Autonomous mission planning
+│   ├── src/                          # Python A* algorithms, terrain processing
+│   ├── tests/                        # unit tests for planner
+│   └── requirements.txt              # Python dependencies
+│
+├── payloads/
+│   ├── marine-rescue/                # flotation module scripts and CAD links
+│   └── fire-monitoring/              # edge‑AI models and config
+│
+├── simulation/                       # Gazebo world files, ROS launch files
+│   └── models/                       # drone URDF and sensor emulators
+│
+├── tools/                            # helper scripts (data conversion, logging)
+│
+├── .gitignore                        # ignore build and VM files
+├── LICENSE                           # MIT License
+├── README.md                         # Project overview and setup
+└── CONTRIBUTING.md                   # Contribution guidelines
